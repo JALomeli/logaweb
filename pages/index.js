@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import React from 'react';
+import Footer from "@/components/Footer";
 import Accordion from '@/components/Accordion';
 
 const items = [
@@ -17,12 +18,12 @@ export default function Home() {
     <main>
 
     <Header/>
-
-        
-        {/* <div className="container mx-auto mt-8">
+         {/* <div className="container mx-auto mt-8">
         <h1 className="text-2xl font-bold mb-4">Acordeón de Ejemplo</h1>
         <Accordion items={items} />
-      </div> */}
+      </div>  */}
+    <Footer/>
+
     </main>
   );
 }
