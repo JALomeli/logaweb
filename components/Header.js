@@ -1,32 +1,46 @@
 import React from "react";
-import BtnLogin from "@/components/BtnLogin";
 import Image from "next/image";
-import Imagenes from "@/Imagenes";
+import { Link } from "react-daisyui";
 
 export default function Header() {
   return (
     <main>
-      <div className="bg-gradient-to-b from-pink-200 to-pink-400 text-black p-4 flex items-center justify-center">
-        <div className="flex items-center ">
+      <div className="bg-gradient-to-b from-pink-200 to-pink-400 text-black px-2 py-1 flex items-center justify-around">
+        <div className="flex m-1 ">
+          <Link href="/">
             <Image
-                src="/Imagenes/Logalogo.png"
-                alt="Picture of the author"
-                width={50}
-                height={50}
+              src="/Imagenes/Logalogo.png"
+              alt="Loga logo"
+              width={250}
+              height={150}
+              objectFit="cover"
+              className=" flex items-center justify-center py-1 "
             />
-          <span className="font-bold">Logotipo</span>
+          </Link>
         </div>
-        <div className="flex  ">
-          <button className="hover:bg-gray-700 px-3 py-2 rounded">
+        <div className="flex  justify-between space-x-12 m-1 p-1">
+          <button className="border border-black rounded px-3 py-1  text-black hover:bg-red-500  hover:border-black-500 m-1">
             Inicio
           </button>
-          <button className="hover:bg-gray-700 px-3 py-2 rounded">
+          <button className="border border-black rounded px-3 py-1  text-black hover:bg-red-500  hover:border-black-500 m-1">
             Productos
           </button>
-          <button className="hover:bg-gray-700 px-3 py-2 rounded">Otro</button>
+          <button className="border border-black rounded px-3 py-1  text-black hover:bg-red-500  hover:border-black-500 m-1">
+            Inicia Sesion
+          </button>
+          <div className="flex ">
+            <Link href="/">
+              <Image
+                src="Imagenes/cart.svg"
+                alt="Profile Pic"
+                width={35}
+                height={35}
+                objectFit="cover"
+                className="flex align-center justify-center py-2 "
+              />
+            </Link>
+          </div>
         </div>
-        <div className="flex "></div>
-        <BtnLogin />
       </div>
     </main>
   );
