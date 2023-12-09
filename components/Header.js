@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Link } from "react-daisyui";
+import BtnLogin from "./BtnLogin";
 
 export default function Header() {
   return (
@@ -19,15 +20,28 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex  justify-between space-x-12 m-1 p-1">
-          <button className="border border-black rounded px-3 py-1  text-black hover:bg-red-500  hover:border-black-500 m-1">
-            Inicio
-          </button>
-          <button className="border border-black rounded px-3 py-1  text-black hover:bg-red-500  hover:border-black-500 m-1">
-            Productos
-          </button>
-          <button className="border border-black rounded px-3 py-1  text-black hover:bg-red-500  hover:border-black-500 m-1">
-            Inicia Sesion
-          </button>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="/"
+            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
+          >
+            <button>Inicio</button>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="/"
+            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
+          >
+            <button>Productos</button>
+          </Link>
+          <Link
+            style={{ textDecoration: "none" }}
+            href="/LogIn"
+            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
+          >
+            <button>Inicia Sesion</button>
+          </Link>
+
           <div className="flex ">
             <Link href="/">
               <Image
@@ -39,8 +53,6 @@ export default function Header() {
                 className="flex align-center justify-center py-2 "
               />
             </Link>
-
-
           </div>
         </div>
       </div>
