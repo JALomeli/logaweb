@@ -3,9 +3,10 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import React from "react";
 import Footer from "@/components/Footer";
-import { Link } from "react-daisyui";
+import { Link, Navbar } from "react-daisyui";
 import Accordion from "@/components/Accordion";
 import LandingPage from "@/components/LandingPage";
+
 
 
 const items = [
@@ -21,6 +22,7 @@ export default function Home() {
     <main>
       <Header />
       <LandingPage />
+
       {/* Resto del contenido */}
       {/* <div className="container mx-auto mt-8">
         <h1 className="text-2xl font-bold mb-4">Acordeón de Ejemplo</h1>

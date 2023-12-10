@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Link } from "react-daisyui";
 import BtnLogin from "./BtnLogin";
+import Searchbar from "./Searchbar";
 
 export default function Header() {
   return (
@@ -20,6 +21,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex  justify-between space-x-12 m-1 p-1">
+          
           <Link
             style={{ textDecoration: "none" }}
             href="/"
@@ -29,7 +31,7 @@ export default function Header() {
           </Link>
           <Link
             style={{ textDecoration: "none" }}
-            href="/"
+            href="/Productos"
             className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
           >
             <button>Productos</button>
@@ -54,6 +56,7 @@ export default function Header() {
               />
             </Link>
           </div>
+          
         </div>
       </div>
     </main>
