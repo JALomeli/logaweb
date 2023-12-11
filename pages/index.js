@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import React from "react";
 import Footer from "@/components/Footer";
-import { Link, Navbar } from "react-daisyui";
 import Accordion from "@/components/Accordion";
 import LandingPage from "@/components/LandingPage";
 
