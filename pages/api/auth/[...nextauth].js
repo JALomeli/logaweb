@@ -17,6 +17,7 @@ export const authOptions = {
     // ...add more providers here
   ],
   adapter: MongoDBAdapter(clientPromise),
+  debug: true, 
 }
 
 export default NextAuth(authOptions)
