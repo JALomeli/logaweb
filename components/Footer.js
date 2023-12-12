@@ -26,7 +26,7 @@ export default function Footer() {
               alt="Facebook logo"
               width={75}
               height={75}
-              objectFit="cover"
+              styles={{ objectFit: 'cover' }}
             />
           </Link>
           <div className="flex items-center justify-center py-2 px-4">
@@ -36,7 +36,7 @@ export default function Footer() {
                 alt="Instagram logo"
                 width={75}
                 height={75}
-                objectFit="cover"
+                styles={{ objectFit: 'cover' }}
               />
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
                 alt="WhatsApp logo"
                 width={75}
                 height={75}
-                objectFit="cover"
+                styles={{ objectFit: 'cover' }}
               />
             </Link>
           </div>

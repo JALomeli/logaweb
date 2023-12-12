@@ -13,7 +13,7 @@ const PromocionDia = ({ imageSrc, category, title, description }) => {
           alt="Promoción del día"
           width={250}
           height={150}
-          objectFit="contain"
+          styles={{ objectFit: 'contain' }}
           className="h-full w-full object-center"
         />
       </div>

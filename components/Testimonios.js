@@ -59,7 +59,7 @@ export default function Testimonios() {
                       alt="Testimonio"
                       width={250}
                       height={150}
-                      objectFit="cover"
+                      styles={{ objectFit: 'cover' }}
                     />
                   </div>
                   <div className="mt-4 flex items-center justify-center space-x-3 text-base">

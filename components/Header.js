@@ -15,7 +15,7 @@ export default function Header() {
               alt="Loga logo"
               width={250}
               height={150}
-              objectFit="cover"
+              styles={{ objectFit: 'cover' }}
               className=" flex items-center justify-center py-1 "
             />
           </Link>
@@ -51,7 +51,7 @@ export default function Header() {
                 alt="Profile Pic"
                 width={35}
                 height={35}
-                objectFit="cover"
+                styles={{ objectFit: 'cover' }}
                 className="flex align-center justify-center py-2 "
               />
             </Link>

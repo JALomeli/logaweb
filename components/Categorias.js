@@ -18,7 +18,7 @@ export default function Header() {
                   alt="Testimonio"
                   width={250}
                   height={150}
-                  objectFit="cover"
+                  styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
@@ -39,7 +39,7 @@ export default function Header() {
                   alt="Testimonio"
                   width={250}
                   height={150}
-                  objectFit="cover"
+                  styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
@@ -60,7 +60,7 @@ export default function Header() {
                   alt="Testimonio"
                   width={250}
                   height={150}
-                  objectFit="cover"
+                  styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
@@ -81,7 +81,7 @@ export default function Header() {
                   alt="Testimonio"
                   width={250}
                   height={150}
-                  objectFit="cover"
+                  styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
@@ -102,7 +102,7 @@ export default function Header() {
                   alt="Testimonio"
                   width={250}
                   height={150}
-                  objectFit="cover"
+                  styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
@@ -123,7 +123,7 @@ export default function Header() {
                   alt="Testimonio"
                   width={250}
                   height={150}
-                  objectFit="cover"
+                  styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>

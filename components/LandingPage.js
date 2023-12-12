@@ -21,7 +21,7 @@ export default function LandingPage() {
             alt="Facebook logo"
             width={700}
             height={700}
-            objectFit="cover"
+            styles={{ objectFit: 'cover' }}
             className="flex items-center justify-center py-2 px-2"
           />
           <h1 className="text-4xl md:text-6xl font-bold mb-4 py-2 px-2">
