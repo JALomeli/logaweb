@@ -7,8 +7,8 @@ import Searchbar from "./Searchbar";
 export default function Header() {
   return (
     <main>
-      <div className="bg-gradient-to-b from-pink-200 to-pink-400 text-black px-2 py-1 flex items-center justify-around">
-        <div className="flex m-1 ">
+      <div className="bg-gradient-to-b from-pink-200 to-pink-400 text-black px-2 py-1 flex flex-col md:flex-row items-center justify-center">
+        <div className="flex m-1">
           <Link href="/">
             <Image
               src="/Imagenes/Logalogo.png"
@@ -16,12 +16,11 @@ export default function Header() {
               width={250}
               height={150}
               styles={{ objectFit: 'cover' }}
-              className=" flex items-center justify-center py-1 "
+              className="flex items-center justify-center py-1"
             />
           </Link>
         </div>
-        <div className="flex  justify-between space-x-12 m-1 p-1">
-          
+        <div className="md:flex justify-center md:space-x-12 m-1 p-1 md:items-center">
           <Link
             style={{ textDecoration: "none" }}
             href="/"
@@ -36,15 +35,9 @@ export default function Header() {
           >
             <button>Productos</button>
           </Link>
-          <Link
-            style={{ textDecoration: "none" }}
-            href="/LogIn"
-            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
-          >
-            <button>Inicia Sesion</button>
-          </Link>
 
-          <div className="flex ">
+          <BtnLogin />
+          <div className="flex">
             <Link href="/">
               <Image
                 src="Imagenes/cart.svg"
@@ -52,13 +45,13 @@ export default function Header() {
                 width={35}
                 height={35}
                 styles={{ objectFit: 'cover' }}
-                className="flex align-center justify-center py-2 "
+                className="flex align-center justify-center py-2"
               />
             </Link>
           </div>
-          
         </div>
       </div>
     </main>
   );
 }
+
