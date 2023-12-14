@@ -5,8 +5,10 @@ import toast from "react-hot-toast";
 import Popup from "@/components/Popup";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
+
+
 
 
 //peticion a la api
@@ -33,26 +35,32 @@ export default function RegistroHistorico() {
   const [ciudadEntrega, setCiudadEntrega] = useState("");
   const [open, setOpen] = useState(false);
   const [ventas, setVentas] = useState({});
-  const { data: session } = useSession();
-  const isAdmin = session && session.user.roles && session.user.roles.includes('admin');
+const { data: session } = useSession();
   const router = useRouter();
-
+  const isAdmin = session && session.user.roles.includes('admin');
+  const isUser = session && session.user.roles.includes('user');
   useEffect(() => {
-    if (!session) {
-      router.push('/RegistroHistorico');
-    } else if (!isAdmin) {
-      router.push('/');
-    } else {
-      getData();
+    console.log("isAdmin:", isAdmin);
+    console.log("session:", session);
+  
+    if (router.pathname === '/RegistroHistorico') {
+      if (session === null || isUser ) {
+        console.log("Redirigiendo a /");
+        router.push('/');
+      }
     }
-  }, [session, isAdmin]);
+    getData();
+  }, [session, router]);
 
   const getData = async () => {
-    const res = await axios.get("/api/bdVHistorico");
-    const data = await res.data;
-    setData(data);
+    try {
+      const res = await axios.get("/api/bdVHistorico");
+      const fetchedData = await res.data;
+      setData(fetchedData);
+    } catch (error) {
+      console.error("Error al obtener datos:", error);
+    }
   };
-
   const sendData = async () => {
     setLoading(true);
     console.log("sendData");
