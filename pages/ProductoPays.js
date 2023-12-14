@@ -3,7 +3,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import { Link } from "react-daisyui";
 const product = {
   name: "Pays",
   price: "$180",
@@ -313,9 +313,16 @@ export default function Example() {
                 </button>
               </form>
             */}
-                            <button className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                <Link
+                
+                href="https://wa.me/+526143943434"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                   Haz tu pedido por whatsapp
                 </button>
+              </Link>
             </div>
 
             <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -353,12 +360,7 @@ export default function Example() {
                   <p className="text-sm text-gray-600">{product.details}</p>
                 </div>
               </div>
-              <Link
-                href="https://wa.me/+526143943434"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-              </Link>
+
             </div>
           </div>
         </div>
