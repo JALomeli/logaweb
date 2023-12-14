@@ -76,12 +76,12 @@ export default function Example() {
               {product.breadcrumbs.map((breadcrumb) => (
                 <li key={breadcrumb.id}>
                   <div className="flex items-center">
-                    <a
+                    <Link
                       href={breadcrumb.href}
                       className="mr-2 text-sm font-medium text-gray-900"
                     >
                       {breadcrumb.name}
-                    </a>
+                    </Link>
                     <svg
                       width={16}
                       height={20}
@@ -96,13 +96,13 @@ export default function Example() {
                 </li>
               ))}
               <li className="text-sm">
-                <a
+                <Link
                   href={product.href}
                   aria-current="page"
                   className="font-medium text-gray-500 hover:text-gray-600"
                 >
                   {product.name}
-                </a>
+                </Link>
               </li>
             </ol>
           </nav>
@@ -174,12 +174,12 @@ export default function Example() {
                     ))}
                   </div>
                   <p className="sr-only">{reviews.average} out of 5 stars</p>
-                  <a
+                  <Link
                     href={reviews.href}
                     className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
                   >
                     {reviews.totalCount} reviews
-                  </a>
+                  </Link>
                 </div>
               </div>
 {/*              <form className="mt-10">
@@ -354,12 +354,12 @@ export default function Example() {
                   <p className="text-sm text-gray-600">{product.details}</p>
                 </div>
               </div>
-              <a
+              <Link
                 href="https://wa.me/+526143943434"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              </a>
+              </Link>
             </div>
           </div>
         </div>

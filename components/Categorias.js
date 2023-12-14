@@ -24,10 +24,10 @@ export default function Header() {
                 />
               </div>
               <h3 class="mt-6 text-sm text-gray-500 text-center">
-                <a href="/ProductoReposteria">
+                <Link href="/ProductoReposteria">
                   <span class="absolute inset-0"></span>
                   Kilogramo, medio kilo, cuarto de kilo.
-                </a>
+                </Link>
               </h3>
               <p class="text-base font-semibold text-gray-900 text-center mb-2">
               Reposteria
@@ -45,10 +45,11 @@ export default function Header() {
                 />
               </div>
               <h3 class="mt-6 text-sm text-gray-500 text-center">
-                <a href="/ProductoMuffins">
+
+                <Link href="/ProductoMuffins">
                   <span class="absolute inset-0 "></span>
                   Capuchino, manzana chai, chocolate, etc.
-                </a>
+                </Link>
               </h3>
               <p class="text-base font-semibold text-gray-900 text-center">
                 Muffins
@@ -87,10 +88,10 @@ export default function Header() {
                 />
               </div>
               <h3 class="mt-6 text-sm text-gray-500 text-center">
-                <a href="/ProductoRollo">
+                <Link href="/ProductoRollo">
                   <span class="absolute inset-0"></span>
                   De calabaza, de zanahoria, de chocolate, etc.
-                </a>
+                </Link>
               </h3>
               <p class="text-base font-semibold text-gray-900 text-center">
                 Rollos
@@ -108,10 +109,10 @@ export default function Header() {
                 />
               </div>
               <h3 class="mt-6 text-sm text-gray-500 text-center">
-                <a href="ProductoPays">
+                <Link href="ProductoPays">
                   <span class="absolute inset-0"></span>
                   De manzana, de queso, de chocolate, etc.
-                </a>
+                </Link>
               </h3>
               <p class="text-base font-semibold text-gray-900 text-center">
                 Pays
@@ -129,10 +130,10 @@ export default function Header() {
                 />
               </div>
               <h3 class="mt-6 text-sm text-gray-500 text-center">
-                <a href="ProductoGallletas">
+                <Link href="ProductoGallletas">
                   <span class="absolute inset-0"></span>
                   De chocolate, de vainilla, de fresa, etc.
-                </a>
+                </Link>
               </h3>
               <p class="text-base font-semibold text-gray-900 text-center">
                 Galletas
