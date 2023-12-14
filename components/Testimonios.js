@@ -1,10 +1,29 @@
-import React from "react";
+
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React, { useEffect, useState } from "react";
 
 export default function Testimonios() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600); 
+    };
+
+
+    handleResize();
+
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const testimonios = [
     {
       id: 1,
@@ -37,10 +56,13 @@ export default function Testimonios() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 7000, // El tiempo en milisegundos entre cada cambio de slide (en este caso, 5 segundos)
+    autoplaySpeed: 7000, 
   };
 
-
+  if (isMobile) {
+  
+    return null;
+  }
 
   return (
     <main>
