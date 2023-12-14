@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Testimonios from "@/components/Testimonios";
+import { Link } from "react-daisyui";
 
 export default function LandingPage() {
   return (
@@ -31,12 +32,14 @@ export default function LandingPage() {
             Descubre nuestra exquisita selección de postres artesanales.
             ¡Endulza tu día con cada bocado!
           </p>
-          <button
-            onClick={() => (window.location.href = "#contacto")}
+
+          <Link
+            style={{ textDecoration: "none" }}
+            href="/Productos"
             className="bg-orange-500 text-white py-5 px-6 rounded-full text-xl hover:bg-orange-600 border border-black transition duration-300"
           >
-            Checa nuestros productos
-          </button>
+            <button>Checa nuestros productos</button>
+          </Link>
         </div>
 
         <Testimonios />

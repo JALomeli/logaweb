@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^2.0.7",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "animate.css": "^4.1.1",
+    "axios": "^1.6.2",
     "daisyui": "^4.4.19",
     "db": "^5.0.0",
     "mongo": "^0.1.0",
@@ -20,6 +23,7 @@
     "react": "^18",
     "react-daisyui": "^5.0.0",
     "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },

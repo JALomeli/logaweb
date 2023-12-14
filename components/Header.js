@@ -4,7 +4,7 @@ import { Link } from "react-daisyui";
 import BtnLogin from "./BtnLogin";
 import Searchbar from "./Searchbar";
 
-export default function Header() {
+export default function Header({ session }) {
   return (
     <main>
       <div className="bg-gradient-to-b from-pink-200 to-pink-400 text-black px-2 py-1 flex flex-col md:flex-row items-center justify-center">
@@ -24,31 +24,28 @@ export default function Header() {
           <Link
             style={{ textDecoration: "none" }}
             href="/"
-            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
+            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline "
           >
             <button>Inicio</button>
           </Link>
           <Link
             style={{ textDecoration: "none" }}
             href="/Productos"
-            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline"
+            className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline my-3"
           >
             <button>Productos</button>
           </Link>
 
+          <Link
+            style={{ textDecoration: "none" }}
+            href="/RegistroHistorico"
+            className={`border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline my-3 `}
+          >
+            <button>Registro Historico</button>
+          </Link>
+
           <BtnLogin />
-          <div className="flex">
-            <Link href="/">
-              <Image
-                src="Imagenes/cart.svg"
-                alt="Profile Pic"
-                width={35}
-                height={35}
-                styles={{ objectFit: 'cover' }}
-                className="flex align-center justify-center py-2"
-              />
-            </Link>
-          </div>
+
         </div>
       </div>
     </main>

@@ -41,7 +41,7 @@ export default function BtnLogin() {
   }
 
   return (
-    <button className="border border-black rounded px-3 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline" onClick={() => signIn()}>
+    <button className="border border-black rounded px-10 py-1 text-black hover:bg-red-500 hover:border-black-500 m-1 flex items-center justify-center no-underline md:px-3 md:py-1 " onClick={() => signIn()}>
       Iniciar Sesión
     </button>
   );

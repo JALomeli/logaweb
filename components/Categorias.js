@@ -8,28 +8,28 @@ export default function Header() {
     <div class="bg-gray-100">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
         <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 class="text-2xl font-bold text-gray-900">Collections</h2>
+          <h2 class="text-2xl font-bold text-gray-900">Nuestros Productos</h2>
           <Searchbar />
-          <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
+          <div class="mt-6 space-y-12 mb-2 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                 <Image
-                  src="/Imagenes/AnaVictoria.jpg"
-                  alt="Testimonio"
+                  src="/Imagenes/Reposteria.jpeg"
+                  alt="Reposteria"
                   width={250}
                   height={150}
                   styles={{ objectFit: 'cover' }}
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
+              <h3 class="mt-6 text-sm text-gray-500 text-center">
                 <a href="#">
                   <span class="absolute inset-0"></span>
-                  Desk and Office
+                  Kilogramo, medio kilo, cuarto de kilo
                 </a>
               </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Work from home accessories
+              <p class="text-base font-semibold text-gray-900 text-center mb-2">
+              Reposteria
               </p>
             </div>
             <div class="group relative">
@@ -46,7 +46,7 @@ export default function Header() {
               <h3 class="mt-6 text-sm text-gray-500">
                 <a href="#">
                   <span class="absolute inset-0"></span>
-                  Self-Improvement
+                  Pays
                 </a>
               </h3>
               <p class="text-base font-semibold text-gray-900">
@@ -139,12 +139,12 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <PromocionDia
+        {/* <PromocionDia
           imageSrc="/Imagenes/AnaVictoria.jpg"
           category="Desk and Office"
           title="Work from home accessories"
           description="Explore a variety of accessories for your home office."
-        />
+        /> */}
       </div>
     </div>
   );
