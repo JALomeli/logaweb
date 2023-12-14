@@ -100,41 +100,105 @@ const sendData = async () => {
                         as="h3"
                         className="text-base font-semibold leading-6 text-gray-900"
                       >
-                        Edita al ventas
+                        Edita la venta
                       </Dialog.Title>
                       <div className="mt-2">
-                        <div className="flex flex-col bg-white text-black">
-                          <input
-                            type="text"
-                            value={nombre}
-                            placeholder="Nombre"
-                            onChange={(e) => setNombre(e.target.value)}
-                          />
-                         <input
-                            type="text"
-                            value={apellido}
-                            placeholder="Apellido"
-                            onChange={(e) => setApellido(e.target.value)}
-                          />
-                          <input
-                            type="text"
-                            value={diaPedido}
-                            placeholder="diaPedido"
-                            onChange={(e) => setDiaPedido(e.target.value)}
-                          />
-                          <input
-                            type="text"
-                            value={diaEntrega}
-                            placeholder="diaEntrega"
-                            onChange={(e) => setDiaEntrega(e.target.value)}
-                          />
-                        <input
-                            type="text"
-                            value={ciudadEntrega}
-                            placeholder="ciudadEntrega"
-                            onChange={(e) => setCiudadEntrega(e.target.value)}
-                          />
-                        </div>
+                      <div className="flex justify-center items-center flex-col border border-black p-4 rounded-lg bg-white shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center  ">
+              Nombre
+            </label>
+            <input
+              type="text"
+              placeholder="Nombre"
+              className="input-field mx-auto flex justify-center items-center text-center border border-black border-1"
+              onChange={(e) => setNombre(e.target.value)}
+            />
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center ">
+              Apellido
+            </label>
+            <input
+              type="text"
+              placeholder="Apellido"
+              className="input-field mx-auto flex justify-center text-center border border-black border-1"
+              onChange={(e) => setApellido(e.target.value)}
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center  ">
+              Kilogramos Vendidos 
+            </label>
+            <input
+              type="number"
+              placeholder="Kilo (pz)"
+              className="input-field mx-auto flex justify-center items-center text-center border border-black border-1"
+              onChange={(e) => setKiloReposteria(e.target.value)}
+            />
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center ">
+            Medio Kilo Vendidos 
+            </label>
+            <input
+              type="number"
+              placeholder="Medio kilo (pz)"
+              className="input-field mx-auto flex justify-center text-center border border-black border-1"
+              onChange={(e) => setMediokiloReposteria(e.target.value)}
+            />
+
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center  ">
+            Cuarto Kilo Vendidos
+            </label>
+            <input
+              type="number"
+              placeholder="Cuarto kilo (pz)"
+              className="input-field mx-auto flex justify-center items-center text-center border border-black border-1"
+              onChange={(e) => setCuartokiloReposteria(e.target.value)}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center">
+              Dia del pedido
+            </label>
+            <input
+              type="date"
+              className="input-field mx-auto flex justify-center text-center border border-black border-1 mr-10"
+              onChange={(e) => setDiaPedido(e.target.value)}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center">
+              Dia de entrega
+            </label>
+            <input
+              type="date"
+              className="input-field mx-auto flex justify-center text-center border border-black border-1 mr-10"
+              onChange={(e) => setDiaEntrega(e.target.value)}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+            <label className="block text-sm font-semibold text-gray-600 flex justify-center p-2 mr-5">
+              Ciudad de entrega
+            </label>
+            <select
+              id="ciudadEntrega"
+              name="ciudadEntrega"
+              className="input-field mx-auto"
+              onChange={(e) => setCiudadEntrega(e.target.value)}
+            >
+              <option value="" disabled selected>
+                Selecciona la ciudad
+              </option>
+              <option value="chihuahua">Chihuahua</option>
+              <option value="delicias">Delicias</option>
+              <option value="juarez">Juarez</option>
+              <option value="local">Local</option>
+            </select>
+          </div>
+        </div>
                       </div>
                     </div>
                   </div>
@@ -144,10 +208,10 @@ const sendData = async () => {
 
                   <button
                     type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
+                    className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto pointer-events-none"
                     onClick={() => sendData()}
                   >
-                    Deactivate
+                    Editar
                   </button>
                   <button
                     type="button"
@@ -155,7 +219,7 @@ const sendData = async () => {
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >
-                    Cancel
+                    Cancelar
                   </button>
                   
                 </div>

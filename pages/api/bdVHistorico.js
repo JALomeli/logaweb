@@ -9,7 +9,6 @@ export default async function handler(req,res){
 
     switch(method){
         case "POST":
-            console.log(body);
             const dataVentas = {
                 nombre: body.nombre,
                 apellido: body.apellido,
