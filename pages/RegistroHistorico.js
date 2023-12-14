@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 import Popup from "@/components/Popup";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/router";
+import { useSession } from 'next-auth/react';
 
 
 //peticion a la api
@@ -31,23 +33,20 @@ export default function RegistroHistorico() {
   const [ciudadEntrega, setCiudadEntrega] = useState("");
   const [open, setOpen] = useState(false);
   const [ventas, setVentas] = useState({});
+  const { data: session } = useSession();
+  const isAdmin = session && session.user.roles && session.user.roles.includes('admin');
+  const router = useRouter();
 
-  //1 poner boton
-  //2 click al boton cambie el estado a true DONE
-  //3 espero 10 segundos DONE
-  //4 cambio el estado a false
-
-  //   const handleLoading = () => {
-  //       setLoading(true);
-  //       setTimeout(() => {
-  //           setLoading(false);
-  //       }, 10000);
-  //   }
   useEffect(() => {
-    console.log("useEffect");
+    if (!session) {
+      router.push('/RegistroHistorico');
+    } else if (!isAdmin) {
+      router.push('/');
+    } else {
+      getData();
+    }
+  }, [session, isAdmin]);
 
-    getData();
-  }, []);
   const getData = async () => {
     const res = await axios.get("/api/bdVHistorico");
     const data = await res.data;
