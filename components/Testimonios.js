@@ -49,7 +49,7 @@ export default function Testimonios() {
           <Slider {...settings}>
             {testimonios.map((testimonio) => (
               <div key={testimonio.id} className="mt-10">
-                <blockquote className="flex text-center text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold leading-8 text-gray-900">
+                <blockquote className="flex text-center text-base sm:text-sm md:text-l lg:text-2xl xl:text-3xl font-semibold leading-8 text-gray-900">
                   <p>{testimonio.comentario}</p>
                 </blockquote>
                 <figcaption className="mt-8 flex items-center justify-center flex-col">

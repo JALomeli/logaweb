@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Searchbar from "./Searchbar";
 import PromocionDia from "./PromocionDia";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -23,9 +24,9 @@ export default function Header() {
                 />
               </div>
               <h3 class="mt-6 text-sm text-gray-500 text-center">
-                <a href="#">
+                <a href="/ProductoReposteria">
                   <span class="absolute inset-0"></span>
-                  Kilogramo, medio kilo, cuarto de kilo
+                  Kilogramo, medio kilo, cuarto de kilo.
                 </a>
               </h3>
               <p class="text-base font-semibold text-gray-900 text-center mb-2">
@@ -35,7 +36,7 @@ export default function Header() {
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                 <Image
-                  src="/Imagenes/Bob.jpg"
+                  src="/Imagenes/MUFFINSgrupo.jpeg"
                   alt="Testimonio"
                   width={250}
                   height={150}
@@ -43,20 +44,20 @@ export default function Header() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">
-                  <span class="absolute inset-0"></span>
-                  Pays
+              <h3 class="mt-6 text-sm text-gray-500 text-center">
+                <a href="/ProductoMuffins">
+                  <span class="absolute inset-0 "></span>
+                  Capuchino, manzana chai, chocolate, etc.
                 </a>
               </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Journals and note-taking
+              <p class="text-base font-semibold text-gray-900 text-center">
+                Muffins
               </p>
             </div>
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                 <Image
-                  src="/Imagenes/Lucia.jpg"
+                  src="/Imagenes/empanadas.jpeg"
                   alt="Testimonio"
                   width={250}
                   height={150}
@@ -64,20 +65,20 @@ export default function Header() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">
+              <h3 class="mt-6 text-sm text-gray-500 text-center ">
+                <Link href="/ProductoEmpanadas">
                   <span class="absolute inset-0"></span>
-                  Travel
-                </a>
+                  Manzana, piña, chocolate, cajeta entre otros.
+                </Link>
               </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Daily commute essentials
+              <p class="text-base font-semibold text-gray-900 text-center">
+                Empanadas
               </p>
             </div>
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                 <Image
-                  src="/Imagenes/Lucia.jpg"
+                  src="/Imagenes/rollocompleto.jpeg"
                   alt="Testimonio"
                   width={250}
                   height={150}
@@ -85,20 +86,20 @@ export default function Header() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">
+              <h3 class="mt-6 text-sm text-gray-500 text-center">
+                <a href="/ProductoRollo">
                   <span class="absolute inset-0"></span>
-                  Travel
+                  De calabaza, de zanahoria, de chocolate, etc.
                 </a>
               </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Daily commute essentials
+              <p class="text-base font-semibold text-gray-900 text-center">
+                Rollos
               </p>
             </div>
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                 <Image
-                  src="/Imagenes/Lucia.jpg"
+                  src="/Imagenes/pay nuez.jpeg"
                   alt="Testimonio"
                   width={250}
                   height={150}
@@ -106,20 +107,20 @@ export default function Header() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">
+              <h3 class="mt-6 text-sm text-gray-500 text-center">
+                <a href="ProductoPays">
                   <span class="absolute inset-0"></span>
-                  Travel
+                  De manzana, de queso, de chocolate, etc.
                 </a>
               </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Daily commute essentials
+              <p class="text-base font-semibold text-gray-900 text-center">
+                Pays
               </p>
             </div>
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                 <Image
-                  src="/Imagenes/Lucia.jpg"
+                  src="/Imagenes/Galletas avena.jpg"
                   alt="Testimonio"
                   width={250}
                   height={150}
@@ -127,14 +128,14 @@ export default function Header() {
                   className="h-full w-full object-cover object-center"
                 />
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">
+              <h3 class="mt-6 text-sm text-gray-500 text-center">
+                <a href="ProductoGallletas">
                   <span class="absolute inset-0"></span>
-                  Travel
+                  De chocolate, de vainilla, de fresa, etc.
                 </a>
               </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Daily commute essentials
+              <p class="text-base font-semibold text-gray-900 text-center">
+                Galletas
               </p>
             </div>
           </div>
